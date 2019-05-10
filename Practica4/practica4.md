@@ -41,6 +41,16 @@ Para finalizar vamos a hacer peticiones por HTTPS utilizando la herramienta curl
 ![Captura 7](https://github.com/nicolasrhc/SWAP/blob/master/Practica4/Imagenes/7.png)
 Captura 7
 
+Para configurar el balanceador tenemos que pasar los archivos de certificación al otro servidor y al balanceador. Lo podemos hacer con la herramenienta rsync. Una vez copiados, tenemos que modificar el archivo /etc/nginx/conf.d/default.conf añadiendo lo siguiente:
+
+![Captura 8](https://github.com/nicolasrhc/SWAP/blob/master/Practica4/Imagenes/8.png)
+Captura 8
+
+Reiniciamos el servicio y comprobamos que funciona:
+
+![Captura 9](https://github.com/nicolasrhc/SWAP/blob/master/Practica4/Imagenes/9.png)
+Captura 9
+
 ### Configuración del cortafuegos
 Primero bloqueamos todo el trafico, lo permitimos por medio de localhost y comprobamos con curl que no ocurre nada
 
